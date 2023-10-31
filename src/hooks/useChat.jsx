@@ -66,10 +66,8 @@ export function useChat() {
         setError(null)
 
         //1.post req: 
-        const response = await fetch("http://localhost:8000/api/chats", {
-            //I didn't mention localhost 3000 because in package.json,
-            //I added this=>  "proxy": "http://localhost:4000",
-            //It avoids also cors error
+        const response = await fetch("https://bdevgpt-server.onrender.com/api/chats", {
+            //const response = await fetch("http://localhost:8000/api/chats", {
             method: "POST",
             headers: { "Content-Type": 'application/json', },
             body: JSON.stringify({ msg: myReq })
