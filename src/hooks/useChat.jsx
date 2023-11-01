@@ -67,7 +67,7 @@ export function useChat() {
 
         //1.post req: 
         const response = await fetch("https://bdevgpt-server.onrender.com/api/chats", {
-            //const response = await fetch("http://localhost:8000/api/chats", {
+            //const response = await fetch("http://localhost:xxxx/api/chats", {
             method: "POST",
             headers: { "Content-Type": 'application/json', },
             body: JSON.stringify({ msg: myReq })
