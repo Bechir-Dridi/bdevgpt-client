@@ -72,7 +72,7 @@ export function useChat() {
             //body: JSON.stringify({ msg: [req, ...chats] })
         })
         const json = await response.json()
-        console.log("json:", json)
+        //console.log("json:", json)
         if (!response.ok) {
             setIsLoading(false)
             setError(json.error)
