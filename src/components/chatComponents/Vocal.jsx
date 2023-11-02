@@ -22,7 +22,7 @@ export const Vocal = ({ setVocalReq }) => {
     }
 
     useEffect(() => {
-        console.log("Transcript:", transcript);
+        //console.log("Transcript:", transcript);
         setVocalReq(transcript);
     }, [transcript])
 
