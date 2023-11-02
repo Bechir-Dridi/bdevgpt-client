@@ -88,6 +88,7 @@ button:focus-visible {
   margin: 8px;
   padding: 8px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .navbar-container .footer a {

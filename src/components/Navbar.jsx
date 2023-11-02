@@ -1,3 +1,4 @@
+import React, { useState } from "react"
 import "../index.css"
 //context hook:
 import { useChatContext } from "../hooks/useChatContext"
@@ -6,6 +7,8 @@ import { useChatContext } from "../hooks/useChatContext"
 export const Navbar = ({ setID, setFilterState, setTitleToggle, setSelectedTitle }) => {
     //context:
     const { chats } = useChatContext()
+    //track selected list item:
+    const [selected, setSelected] = useState(null)
 
     //create ID:
     const create_ID = (chats) => {
@@ -24,6 +27,8 @@ export const Navbar = ({ setID, setFilterState, setTitleToggle, setSelectedTitle
         setFilterState(createdID)
 
         setTitleToggle(true)
+
+        setSelected(createdID)
     }
 
 
@@ -53,8 +58,12 @@ export const Navbar = ({ setID, setFilterState, setTitleToggle, setSelectedTitle
     }
     console.log("newTitles:", newTitles);
 
-
-
+    const selectedStyle = {
+        color: "white",
+        fontWeight: "bold", // Bold text
+        outline: "1px solid #fff", // Red outline
+    }
+    console.log("selected title:", selected);
     return (
         <div className="navbar-container">
             <div className="new-container">
@@ -67,7 +76,14 @@ export const Navbar = ({ setID, setFilterState, setTitleToggle, setSelectedTitle
                             newTitles.map((newTitle, i) =>
                                 <div key={i} >
 
-                                    <li onClick={() => { filterHandler(newTitle.id, newTitle.title) }}>{newTitle.title}</li>
+                                    <li style={selected === newTitle.id ? selectedStyle : {}}
+                                        onClick={() => {
+                                            filterHandler(newTitle.id, newTitle.title)
+                                            setSelected(newTitle.id)
+                                        }}
+                                    >
+                                        {newTitle.title}
+                                    </li>
 
                                 </div>
                             )
@@ -77,9 +93,9 @@ export const Navbar = ({ setID, setFilterState, setTitleToggle, setSelectedTitle
             </div>
 
             <div className="footer">
-                <p>bdev</p>
-                {/* <p>developed by</p>
-                <a href="https://bechirdev.netlify.app" target="_blank"> <p>bdev.netlify.app</p></a> */}
+                {/* <p>bdev</p> */}
+                <p>developed by</p>
+                <a href="https://bechirdev.netlify.app" target="_blank"> <p>bdev.netlify.app</p></a>
 
             </div>
         </div>
