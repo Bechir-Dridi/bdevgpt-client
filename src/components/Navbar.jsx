@@ -69,7 +69,7 @@ export const Navbar = ({ setID, setFilterState, setTitleToggle, setSelectedTitle
     return (
         <div className="navbar-container">
             <div className="new-container">
-                <button onClick={handleSubmit}>New</button>
+                <button onClick={handleSubmit}>+ New Chat</button>
             </div>
             <div className="titles">
                 {newTitles &&

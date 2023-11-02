@@ -88,7 +88,6 @@ button:focus-visible {
   margin: 8px;
   padding: 8px;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 .navbar-container .footer a {
@@ -101,8 +100,17 @@ button:focus-visible {
 /* Navabar.js-------------------end */
 
 
-/* Chat.js-------------------begin */
+/* Chat.js-------------------begin V*/
 /* -----chats---- */
+.chats-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* Ensure the container takes up the full viewport height */
+  justify-content: space-between;
+  /* Pushes content to the top and bottom */
+}
+
 
 .chats-container header {
   /* the scroll appear when height overflows max-height: */
@@ -111,13 +119,6 @@ button:focus-visible {
 
 .chats-container .chats {
   /* the scroll appear when height overflows max-height: */
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-.chats-container .chats {
-  /* the scroll appear when height overflows max-height: */
-  max-height: 80vh;
   overflow-y: auto;
 }
 
@@ -129,112 +130,89 @@ button:focus-visible {
 
 /* -----input---- */
 .request {
+  background-color: transparent;
+  padding: 10px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
+  justify-content: space-between;
+  margin-top: auto;
+  /* Pushes this div to the bottom */
 }
 
-.request .vocal {
-  padding: 0px;
-  position: fixed;
-  bottom: 1rem;
-  margin-left: .5rem;
-  z-index: 2;
+/* .request .vocal {
+  Add styles for the vocal section 
+}*/
 
+.request .form-container {
+  flex-grow: 1;
+  /* Takes up available vertical space */
+  margin-left: 10px;
+  /* Add some spacing between vocal and input */
 }
-
-.form-container {
-  display: flex;
-  position: fixed;
-  bottom: 0;
-  margin-left: .5rem;
-  width: 80%;
-
-}
-
 
 form {
-  flex: 6;
   display: flex;
-  justify-content: center;
-  margin: .5rem 0rem;
-  z-index: 1;
-}
-
-.btn-submit-container {
-  flex: .4;
-  background-color: #444343;
-  justify-content: center;
   align-items: center;
-  padding: 10px;
-  border-radius: 0px 10px 10px 0px;
-}
-
-.loading-submit {
-  margin: 0px;
-  padding: 10px;
-}
-
-.btn-submit {
-  margin: 0px;
-  padding: 10px;
-  background-color: rgb(25, 195, 125);
 }
 
 input {
-  padding-left: 3rem;
-  flex: 6;
-  border: 2px solid #ccc;
-  border-radius: 10px 0 0 10px;
+  flex-grow: 1;
+  /* Expands to fill the available horizontal space */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   font-size: 18px;
-  background-color: #444343;
-  outline: none;
 }
 
-
-
-/* Chat.js-------------------end */
-
-
-/* Vocal.js-------------------begin */
-
-
-.btn-icon {
-  margin-inline: 5px;
+.btn-submit-container {
+  margin-left: 10px;
 }
 
-.vocal-container button {
-  background-color: transparent;
-  border-radius: 10rem;
+.btn-submit {
+  background-color: rgb(25, 195, 125);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: rgb(180, 252, 207) 0.3s;
+  cursor: pointer;
+}
+
+/* .loading-submit {
+  font-weight: bold;
+  color: #007bff;
+} */
+
+/* Chat.js-------------------end V*/
+
+
+/* Vocal.js-------------------begin V*/
+.vocal-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Button styling */
+.vocal-container .btn-icon {
+  background: transparent;
+  border: none;
   padding: 10px;
-  margin-left: 0;
+  cursor: pointer;
+  margin-inline: 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
 }
 
-.icon {
+.vocal-container .btn-icon:hover {
+  background-color: #4b4949;
+  /* Add a background color on hover */
+}
+
+
+/* Icon styling */
+.vocal-container .icon {
   width: 24px;
   height: 24px;
 }
 
-/* Vocal.js-------------------end */
-
-
-
-
-
-
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+/* Vocal.js-------------------end V*/
