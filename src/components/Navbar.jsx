@@ -56,14 +56,16 @@ export const Navbar = ({ setID, setFilterState, setTitleToggle, setSelectedTitle
             newTitles.push({ title: chat.title, id: chat.id });
         }
     }
-    console.log("newTitles:", newTitles);
+    //console.log("newTitles:", newTitles);
 
     const selectedStyle = {
         color: "white",
         fontWeight: "bold", // Bold text
         outline: "1px solid #fff", // Red outline
     }
-    console.log("selected title:", selected);
+    //console.log("selected title:", selected);
+
+
     return (
         <div className="navbar-container">
             <div className="new-container">

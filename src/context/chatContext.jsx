@@ -16,7 +16,7 @@ export const ChatContextProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(chatReducer, { chats: [] })
 
-    console.log("context resquestState", state);
+    //console.log("context resquestState", state);
 
 
     return (

@@ -11,8 +11,6 @@ export function useChat() {
     const [isLoading, setIsLoading] = useState(null)
     //context:
     const { dispatch } = useChatContext()
-    //const {  prevChats: chats } = useChatContext()
-    //console.log("prevChats:", prevChats);
 
 
     //2.dispatch chat:
@@ -55,7 +53,7 @@ export function useChat() {
 
 
 
-        console.log("MSG:", request, response);
+        //console.log("MSG:", request, response);
         dispatch({ type: 'create_chat', payload: request })
         dispatch({ type: 'create_chat', payload: response })
     }
