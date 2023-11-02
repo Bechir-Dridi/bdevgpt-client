@@ -33,7 +33,7 @@ export const Navbar = ({ setID, setFilterState, setTitleToggle, setSelectedTitle
 
 
     const filterHandler = (id, title) => {
-        console.log("filter:", id)
+        //console.log("filter:", id)
         setFilterState(id)
         setID(id)
         setSelectedTitle(title)
