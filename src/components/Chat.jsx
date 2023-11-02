@@ -100,6 +100,7 @@ export const Chat = ({ ID, filterState, titleToggle, setTitleToggle, selectedTit
                         <input
                             type="text"
                             className="request"
+                            placeholder="Send a message"
                             onChange={(e) => setUserReq(e.target.value)}
                             value={userReq}
                         />
