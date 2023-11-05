@@ -97,7 +97,7 @@ export const Navbar = ({ setID, setFilterState, setTitleToggle, setSelectedTitle
             <div className="footer">
                 {/* <p>bdev</p> */}
                 <p>developed by</p>
-                <a href="https://bechirdev.netlify.app" target="_blank"> <p>bdev.netlify.app</p></a>
+                <a href="https://bechirdev.netlify.app" target="_blank"> <p>bechirdev.netlify.app</p></a>
 
             </div>
         </div>
